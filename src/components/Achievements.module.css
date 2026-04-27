@@ -1,0 +1,59 @@
+.section {
+  padding: 5rem 0;
+  background: var(--ink);
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+.heading {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--cream);
+  line-height: 1.15;
+  margin-top: 0.5rem;
+}
+.heading em { font-style: italic; color: rgba(249,246,240,0.45); }
+
+.header .mono-label { color: rgba(249,246,240,0.35); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid rgba(249,246,240,0.08);
+  border-radius: 2px;
+  transition: border-color 0.25s, background 0.25s;
+}
+.card:hover {
+  background: rgba(249,246,240,0.04);
+  border-color: rgba(249,246,240,0.18);
+}
+
+.cardTop {
+  border-left: 3px solid;
+  padding-left: 10px;
+  margin-bottom: 0.9rem;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(249,246,240,0.55);
+}
+
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 580px) { .grid { grid-template-columns: 1fr; } }
